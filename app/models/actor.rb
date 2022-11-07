@@ -5,6 +5,6 @@ class Actor < ActiveRecord::Base
     "#{self.first_name} #{self.last_name}"
   end
   def list_roles
-    self.characters.map{|character| "#{character.name}- #{Show.find(character.show_id).name}"}
+    self.characters.map{|character| "#{character.name} - #{Show.find(character.show_id).name}"}
   end
 end
